@@ -25,6 +25,7 @@ resource "azurerm_network_interface" "VM2" {
     name                          = "internal"
     subnet_id                     = azurerm_subnet.VM2.id
     private_ip_address_allocation = "Static"
+    private_ip_address = "10.15.1.0"
     public_ip_address_id = azurerm_public_ip.VM2.id
   }
 }
