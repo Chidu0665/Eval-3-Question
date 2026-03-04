@@ -24,8 +24,7 @@ resource "azurerm_network_interface" "VM1" {
   ip_configuration {
     name                          = "internal"
     subnet_id                     = azurerm_subnet.VM1.id
-    private_ip_address_allocation = "Static"
-    private_ip_address = "10.5.0.0"
+    private_ip_address_allocation = "Dynamic"
     public_ip_address_id = azurerm_public_ip.VM1.id
   }
 }
